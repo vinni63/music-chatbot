@@ -1,3 +1,4 @@
+import os
 from googleapiclient.discovery import build
 YOUTUBE_API_KEY = "AIzaSyDg7EeWdJ4HYQT-HWv0lTznE3Dn41HM3aE"
 
@@ -72,4 +73,5 @@ def chat():
     return jsonify({"response": response})
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
