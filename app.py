@@ -1,6 +1,6 @@
 import os
 from googleapiclient.discovery import build
-YOUTUBE_API_KEY = os.environ.get("AIzaSyDg7EeWdJ4HYQT-HWv0lTznE3Dn41HM3aE")
+YOUTUBE_API_KEY = os.environ.get("AIzaSyAT0lr-BTjJYQjtmhuzulxXfhT6yjuF9WU")
 
 youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_KEY)
 from flask import Flask, render_template, request, jsonify
